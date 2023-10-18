@@ -12,8 +12,6 @@ using UDW.Library;
 
 namespace WebApplication63CNTTN1.Areas.Admin.Controllers
 {
-    public class CategoryController : Controller
-    {
         public class CategoryController : Controller
         {
             CategoriesDAO categoriesDAO = new CategoriesDAO();
@@ -65,9 +63,9 @@ namespace WebApplication63CNTTN1.Areas.Admin.Controllers
                     //Xu ly tu dong: UpdateAt
                     categories.UpdateAt = DateTime.Now;
                     //Xu ly tu dong: ParentId
-                    if (categories.ParentID == null)
+                    if (categories.ParentId == null)
                     {
-                        categories.ParentID = 0;
+                        categories.ParentId = 0;
                     }
                     //Xu ly tu dong: Order
                     if (categories.Order == null)
@@ -174,4 +172,4 @@ namespace WebApplication63CNTTN1.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
         }
-    }
+}
