@@ -12,7 +12,11 @@ using UDW.Library;
 
 namespace WebApplication63CNTTN1.Areas.Admin.Controllers
 {
+<<<<<<< HEAD
     public class CategoryController : Controller
+=======
+        public class CategoryController : Controller
+>>>>>>> 80f0c4086dbe757550901d47204bcb395ff6874d
         {
             CategoriesDAO categoriesDAO = new CategoriesDAO();
 
@@ -295,5 +299,8 @@ namespace WebApplication63CNTTN1.Areas.Admin.Controllers
             }
             
         }
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 80f0c4086dbe757550901d47204bcb395ff6874d
 }
