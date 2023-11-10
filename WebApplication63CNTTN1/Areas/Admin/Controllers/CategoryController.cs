@@ -12,11 +12,8 @@ using UDW.Library;
 
 namespace WebApplication63CNTTN1.Areas.Admin.Controllers
 {
-<<<<<<< HEAD
-    public class CategoryController : Controller
-=======
         public class CategoryController : Controller
->>>>>>> 80f0c4086dbe757550901d47204bcb395ff6874d
+
         {
             CategoriesDAO categoriesDAO = new CategoriesDAO();
 
@@ -194,7 +191,7 @@ namespace WebApplication63CNTTN1.Areas.Admin.Controllers
                 if (id == null)
                 {
                     //thong bao that bai
-                    TempData["message"] = ("Cập nhật trạng thái thất bại");
+                    TempData["message"] = new XMessage("danger","Cập nhật trạng thái thất bại");
                     return RedirectToAction("Index");
                 }
                 //truy van id
@@ -216,7 +213,7 @@ namespace WebApplication63CNTTN1.Areas.Admin.Controllers
                 categoriesDAO.Update(categories);
 
                 //thong bao cap nhat trang thai thanh cong
-                TempData["message"] = ("Cập nhật trạng thái thành công");
+                TempData["message"] = new XMessage("success", "Cập nhật trạng thái thành công");
 
                 return RedirectToAction("Index");
                 }    
@@ -229,17 +226,20 @@ namespace WebApplication63CNTTN1.Areas.Admin.Controllers
             if (id == null)
             {
                 //thong bao that bai
-                TempData["message"] = new XMessage("danger","Không tìm thấy mẫu tin");
+                TempData["message"] = new XMessage("danger", "Không tìm thấy mẩu tin");
+                return RedirectToAction("Index");
+            }
+            //truy van dong co id = id yeu cau
+            Categories categories = categoriesDAO.getRow(id);
+            if (categories == null)
+            {
+                //thong bao that bai
+                TempData["message"] = new XMessage("danger", "Không tìm thấy mẩu tin");
                 return RedirectToAction("Index");
             }
             else
             {
-                //truy van id
-                Categories categories = categoriesDAO.getRow(id);
-                //thong bao cap nhat trang thai thanh cong
-                TempData["message"] = new XMessage("danger", "Cập nhật trạng thái thất bại11111");
-
-                //chuyen doi trang thai cua Satus tu 1<->2
+                //chuyen doi trang thai cua Satus tu 1,2 -> 0: Không hiển thị ở Index
                 categories.Status = 0;
 
                 //cap nhat gia tri UpdateAt
@@ -249,11 +249,11 @@ namespace WebApplication63CNTTN1.Areas.Admin.Controllers
                 categoriesDAO.Update(categories);
 
                 //thong bao cap nhat trang thai thanh cong
-                TempData["message"] = new XMessage("danger", "Cập nhật trạng thái thành công");
+                TempData["message"] = TempData["message"] = new XMessage("success", "Xóa mẩu tin thành công");
 
                 return RedirectToAction("Index");
             }
-            
+
         }
         //////////////////////////////////////////////////////////////////////////////////////
         //TRASH
@@ -299,8 +299,7 @@ namespace WebApplication63CNTTN1.Areas.Admin.Controllers
             }
             
         }
-<<<<<<< HEAD
+
     }
-=======
->>>>>>> 80f0c4086dbe757550901d47204bcb395ff6874d
+
 }
