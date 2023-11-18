@@ -6,3 +6,7 @@ D:\Program\Microsoft Visual Studio\63CNTT5N1\MyClass\obj\Debug\MyClass.csproj.Co
 D:\Program\Microsoft Visual Studio\63CNTT5N1\MyClass\obj\Debug\MyClass.csproj.CopyComplete
 D:\Program\Microsoft Visual Studio\63CNTT5N1\MyClass\obj\Debug\MyClass.dll
 D:\Program\Microsoft Visual Studio\63CNTT5N1\MyClass\obj\Debug\MyClass.pdb
+D:\Program\Microsoft Visual Studio\63CNTT5N1\MyClass\bin\Debug\EntityFramework.dll
+D:\Program\Microsoft Visual Studio\63CNTT5N1\MyClass\bin\Debug\EntityFramework.SqlServer.dll
+D:\Program\Microsoft Visual Studio\63CNTT5N1\MyClass\bin\Debug\EntityFramework.xml
+D:\Program\Microsoft Visual Studio\63CNTT5N1\MyClass\bin\Debug\EntityFramework.SqlServer.xml
